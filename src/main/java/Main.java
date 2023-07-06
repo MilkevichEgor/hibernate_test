@@ -3,19 +3,17 @@ import models.User;
 import services.UserService;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
 
         UserService userService = new UserService();
-        User user = new User("Masha",26);
-        userService.saveUser(user);
-        Auto ferrari = new Auto("Ferrari", "red");
-        ferrari.setUser(user);
-        user.addAuto(ferrari);
-        Auto ford = new Auto("Ford", "black");
-        ford.setUser(user);
-        user.addAuto(ford);
-        userService.updateUser(user);
+        List<User> users = userService.findAllUsers();
+        for (User user : users) {
+            System.out.println(user.getId() + " " + user.getName() + " " + user.getAge());
+            userService.deleteUser(user);
+        }
+
     }
 }

@@ -23,6 +23,7 @@
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="432f2ec9-b6fa-492e-a64b-9385564fb854" dataset="public.users" active-filter-id="" />
     <filter-actions connection-id="432f2ec9-b6fa-492e-a64b-9385564fb854" dataset="public.autos" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
